@@ -74,25 +74,53 @@ header {
       color: $textcolortitle;
       margin: 20px;
     }
+  }
+}
 
-    .picturewitharrow {
-      position: relative;
+.twittercontent {
+  height: 400px;
+  padding: 150px;
+  text-align: center;
+}
 
-      div {
-        position: absolute;
-        top: 0px;
-      }
-    }
+.pos1 {
+  grid-area: p1;
+}
+.pos2 {
+  grid-area: p2;
+}
+.pos3 {
+  grid-area: p3;
+}
+.pos4 {
+  grid-area: p4;
+}
+.pos5 {
+  grid-area: p5;
+}
+.pos6 {
+  grid-area: p6;
+}
+.pos7 {
+  grid-area: p7;
+}
+.pos8 {
+  grid-area: p8;
+}
 
-    .arrow {
-      width: 0;
-      height: 0;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
+.pictures {
+  display: grid;
 
-      border-top: 20px solid #f00;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  grid-template-areas:
+    "p1 p2 p4 p5 p6 p6"
+    "p3 p3 p4 p5 p7 p8";
+}
+
+.discover {
+  height: 200px;
+  background-color: black;
+  text-align: center;
+  button {
+    margin: 100px;
   }
 }
