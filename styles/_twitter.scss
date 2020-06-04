@@ -1,0 +1,32 @@
+.twittercontent {
+  padding-top: 120px;
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: lighten($background, 10);
+
+  img {
+    margin: 15px;
+  }
+  .twitterhandel {
+    font-weight: 600;
+    font-size: 20px;
+    .timesince {
+      font-weight: 200;
+    }
+  }
+
+  .circle {
+    fill: #b3b3b6;
+    stroke: #b3b3b6;
+    stroke-width: 1px;
+  }
+  .circlewhite {
+    fill: white;
+    stroke: grey;
+    stroke-width: 1px;
+  }
+
+  .spaceafter {
+    margin-bottom: 100px;
+  }
+}

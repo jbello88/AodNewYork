@@ -1,0 +1,28 @@
+header {
+  nav {
+    height: 760px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: bold;
+    color: $textcolortitle;
+    margin-left: auto;
+    margin-right: auto;
+
+    a {
+      text-transform: uppercase;
+      margin: 20px;
+    }
+    .dot {
+      margin-top: 22px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+  .back {
+    position: absolute;
+    top: 0px;
+    z-index: -99;
+  }
+}

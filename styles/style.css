@@ -6,12 +6,26 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   width: 1599px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main {
+  background-color: white;
 }
 
 p {
   line-height: 200%;
   color: #777777;
   font-size: 18px;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.center {
+  text-align: center;
 }
 
 h1 {
@@ -22,8 +36,21 @@ h1 {
   margin: 20px;
 }
 
+.relative {
+  position: relative;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 300;
+}
+
 header nav {
-  height: 800px;
+  height: 760px;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -36,7 +63,8 @@ header nav {
           justify-content: center;
   font-weight: bold;
   color: #555555;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header nav a {
@@ -57,7 +85,8 @@ header .back {
 }
 
 .heading {
-  margin: 80px;
+  padding: 50px;
+  background-color: white;
   text-align: center;
 }
 
@@ -73,10 +102,11 @@ header .back {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: white;
 }
 
 .content .card {
-  height: 600px;
+  height: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,7 +148,7 @@ header .back {
 .content .card .witharrow::after {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 0;
   left: 0%;
   width: 0;
   height: 0;
@@ -134,22 +164,11 @@ header .back {
   width: 50px;
 }
 
-.content .relative {
-  position: relative;
-}
-
-.content .center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
 .twittercontent {
   padding-top: 120px;
   padding-bottom: 50px;
   text-align: center;
+  background-color: white;
 }
 
 .twittercontent img {
@@ -228,6 +247,21 @@ header .back {
   -ms-grid-column: 5;
   -ms-grid-column-span: 2;
   grid-area: p6;
+  width: 534px;
+  height: 267px;
+  overflow: hidden;
+}
+
+.pictures .pos6::before {
+  content: "";
+  background-color: green;
+  width: 531px;
+  height: 267px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  opacity: 40%;
 }
 
 .pictures .pos7 {
@@ -240,6 +274,10 @@ header .back {
   -ms-grid-row: 2;
   -ms-grid-column: 6;
   grid-area: p8;
+}
+
+.pictures p {
+  color: white;
 }
 
 .discover {
@@ -263,40 +301,63 @@ header .back {
 }
 
 .signup {
-  height: 400px;
+  height: 300px;
+  padding: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.signup div {
+  background-color: white;
   text-align: center;
 }
 
-.signup div .slogan {
+.signup .slogan {
   font-size: 20px;
   margin: 20px;
   color: #777777;
 }
 
-.signup div .iemail {
-  color: #777777;
-  height: 40px;
-  font-size: 20px;
-  border-color: whitesmoke;
+.signup form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
-.signup div .isubmit {
-  height: 40px;
-  width: 60px;
+.signup input[type="email"] {
+  width: 300px;
+  padding: 0px 20px;
+  margin: 5px;
+  font-size: 18px;
+  color: green;
+  border: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 60px;
+}
+
+.signup input[type="submit"] {
+  height: 60px;
+  width: 100px;
   font-size: 20px;
-  color: 145;
+  margin: 5px;
+  background: #38912c;
+  color: white;
+  border-width: 1px;
+  border-color: transparent;
+  cursor: pointer;
 }
 
 footer {
@@ -309,7 +370,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #faf5f5;
+  background-color: #f1ecec;
 }
 
 footer .address h2 {

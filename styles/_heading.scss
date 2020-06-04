@@ -1,0 +1,12 @@
+.heading {
+  padding: 50px;
+  background-color: lighten($background, 10);
+
+  text-align: center;
+  p {
+    color: $textcolor;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+}

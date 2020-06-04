@@ -1,0 +1,53 @@
+.pictures {
+  .pos1 {
+    grid-area: p1;
+  }
+  .pos2 {
+    grid-area: p2;
+  }
+  .pos3 {
+    grid-area: p3;
+    width: 534px;
+    height: 267px;
+  }
+  .pos4 {
+    grid-area: p4;
+  }
+  .pos5 {
+    grid-area: p5;
+  }
+  .pos6 {
+    grid-area: p6;
+    width: 534px;
+    height: 267px;
+    overflow: hidden;
+    &::before {
+      content: "";
+      background-color: green;
+      width: 531px;
+      height: 267px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 100;
+      opacity: 40%;
+    }
+  }
+  .pos7 {
+    grid-area: p7;
+  }
+  .pos8 {
+    grid-area: p8;
+  }
+
+  display: grid;
+  overflow: hidden;
+
+  grid-template-areas:
+    "p1 p2 p4 p5 p6 p6"
+    "p3 p3 p4 p5 p7 p8";
+
+  p {
+    color: white;
+  }
+}
