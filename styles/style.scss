@@ -8,11 +8,13 @@ $textcolor: #777777;
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  width: 1600px;
+  width: 1599px;
 }
 
 p {
   line-height: 200%;
+  color: $textcolor;
+  font-size: 18px;
 }
 
 h1 {
@@ -32,12 +34,16 @@ header {
     justify-content: center;
     font-weight: bold;
     color: $textcolortitle;
-
     margin: 0 auto;
 
     a {
       text-transform: uppercase;
       margin: 20px;
+    }
+    .dot {
+      margin-top: 22px;
+      width: 10px;
+      height: 10px;
     }
   }
 
@@ -50,6 +56,7 @@ header {
 
 .heading {
   margin: 80px;
+
   text-align: center;
   p {
     color: $textcolor;
@@ -60,13 +67,22 @@ header {
 }
 
 .content {
+  height: 600px;
   display: flex;
 
   .card {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
 
     .icon {
-      margin: 30px;
+      margin-top: 50px;
+    }
+    .line {
+      width: 60px;
     }
 
     h2 {
@@ -74,42 +90,107 @@ header {
       color: $textcolortitle;
       margin: 20px;
     }
+    p {
+      font-size: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      text-align: justify;
+    }
+
+    .witharrow::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 0%;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid white;
+      clear: both;
+      z-index: 99;
+    }
+
+    .relative2 {
+      position: relative;
+      width: 50px;
+    }
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
 .twittercontent {
-  height: 400px;
-  padding: 150px;
+  padding-top: 120px;
+  padding-bottom: 50px;
   text-align: center;
-}
 
-.pos1 {
-  grid-area: p1;
-}
-.pos2 {
-  grid-area: p2;
-}
-.pos3 {
-  grid-area: p3;
-}
-.pos4 {
-  grid-area: p4;
-}
-.pos5 {
-  grid-area: p5;
-}
-.pos6 {
-  grid-area: p6;
-}
-.pos7 {
-  grid-area: p7;
-}
-.pos8 {
-  grid-area: p8;
+  img {
+    margin: 15px;
+  }
+  .twitterhandel {
+    font-weight: 600;
+    font-size: 20px;
+    .timesince {
+      font-weight: 200;
+    }
+  }
+
+  .circle {
+    fill: #b3b3b6;
+    stroke: #b3b3b6;
+    stroke-width: 1px;
+  }
+  .circlewhite {
+    fill: white;
+    stroke: grey;
+    stroke-width: 1px;
+  }
+
+  .spaceafter {
+    margin-bottom: 100px;
+  }
 }
 
 .pictures {
+  .pos1 {
+    grid-area: p1;
+  }
+  .pos2 {
+    grid-area: p2;
+  }
+  .pos3 {
+    grid-area: p3;
+    width: 534px;
+    height: 267px;
+  }
+  .pos4 {
+    grid-area: p4;
+  }
+  .pos5 {
+    grid-area: p5;
+  }
+  .pos6 {
+    grid-area: p6;
+  }
+  .pos7 {
+    grid-area: p7;
+  }
+  .pos8 {
+    grid-area: p8;
+  }
   display: grid;
+  overflow: hidden;
 
   grid-template-areas:
     "p1 p2 p4 p5 p6 p6"
@@ -118,9 +199,69 @@ header {
 
 .discover {
   height: 200px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
   background-color: black;
   text-align: center;
+
   button {
-    margin: 100px;
+    margin: 75px;
+    width: 300px;
+    height: 50px;
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    border-style: solid;
+    font-size: 18px;
+  }
+}
+
+.signup {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    text-align: center;
+    .slogan {
+      font-size: 20px;
+      margin: 20px;
+      color: $textcolor;
+    }
+    .iemail {
+      color: $textcolor;
+      height: 40px;
+      font-size: 20px;
+      border-color: whitesmoke;
+    }
+    .isubmit {
+      height: 40px;
+      width: 60px;
+      font-size: 20px;
+
+      color: green($color: #38912c);
+    }
+  }
+}
+
+footer {
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #faf5f5;
+
+  .address {
+    h2 {
+      color: $textcolortitle;
+      font-size: 16px;
+      margin: 0;
+    }
+    p {
+      color: $textcolor;
+      margin: 0;
+      line-height: 100%;
+    }
   }
 }

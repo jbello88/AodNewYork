@@ -5,11 +5,13 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  width: 1600px;
+  width: 1599px;
 }
 
 p {
   line-height: 200%;
+  color: #777777;
+  font-size: 18px;
 }
 
 h1 {
@@ -42,6 +44,12 @@ header nav a {
   margin: 20px;
 }
 
+header nav .dot {
+  margin-top: 22px;
+  width: 10px;
+  height: 10px;
+}
+
 header .back {
   position: absolute;
   top: 0px;
@@ -61,17 +69,36 @@ header .back {
 }
 
 .content {
+  height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .content .card {
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
 .content .card .icon {
-  margin: 30px;
+  margin-top: 50px;
+}
+
+.content .card .line {
+  width: 60px;
 }
 
 .content .card h2 {
@@ -80,77 +107,220 @@ header .back {
   margin: 20px;
 }
 
+.content .card p {
+  font-size: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  text-align: justify;
+}
+
+.content .card .witharrow::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0%;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid white;
+  clear: both;
+  z-index: 99;
+}
+
+.content .card .relative2 {
+  position: relative;
+  width: 50px;
+}
+
+.content .relative {
+  position: relative;
+}
+
+.content .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .twittercontent {
-  height: 400px;
-  padding: 150px;
+  padding-top: 120px;
+  padding-bottom: 50px;
   text-align: center;
 }
 
-.pos1 {
+.twittercontent img {
+  margin: 15px;
+}
+
+.twittercontent .twitterhandel {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.twittercontent .twitterhandel .timesince {
+  font-weight: 200;
+}
+
+.twittercontent .circle {
+  fill: #b3b3b6;
+  stroke: #b3b3b6;
+  stroke-width: 1px;
+}
+
+.twittercontent .circlewhite {
+  fill: white;
+  stroke: grey;
+  stroke-width: 1px;
+}
+
+.twittercontent .spaceafter {
+  margin-bottom: 100px;
+}
+
+.pictures {
+  display: -ms-grid;
+  display: grid;
+  overflow: hidden;
+      grid-template-areas: "p1 p2 p4 p5 p6 p6" "p3 p3 p4 p5 p7 p8";
+}
+
+.pictures .pos1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: p1;
 }
 
-.pos2 {
+.pictures .pos2 {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: p2;
 }
 
-.pos3 {
+.pictures .pos3 {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: p3;
+  width: 534px;
+  height: 267px;
 }
 
-.pos4 {
+.pictures .pos4 {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 3;
   grid-area: p4;
 }
 
-.pos5 {
+.pictures .pos5 {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 4;
   grid-area: p5;
 }
 
-.pos6 {
+.pictures .pos6 {
   -ms-grid-row: 1;
   -ms-grid-column: 5;
   -ms-grid-column-span: 2;
   grid-area: p6;
 }
 
-.pos7 {
+.pictures .pos7 {
   -ms-grid-row: 2;
   -ms-grid-column: 5;
   grid-area: p7;
 }
 
-.pos8 {
+.pictures .pos8 {
   -ms-grid-row: 2;
   -ms-grid-column: 6;
   grid-area: p8;
 }
 
-.pictures {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "p1 p2 p4 p5 p6 p6" "p3 p3 p4 p5 p7 p8";
-}
-
 .discover {
   height: 200px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
   background-color: black;
   text-align: center;
 }
 
 .discover button {
-  margin: 100px;
+  margin: 75px;
+  width: 300px;
+  height: 50px;
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  border-style: solid;
+  font-size: 18px;
+}
+
+.signup {
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup div {
+  text-align: center;
+}
+
+.signup div .slogan {
+  font-size: 20px;
+  margin: 20px;
+  color: #777777;
+}
+
+.signup div .iemail {
+  color: #777777;
+  height: 40px;
+  font-size: 20px;
+  border-color: whitesmoke;
+}
+
+.signup div .isubmit {
+  height: 40px;
+  width: 60px;
+  font-size: 20px;
+  color: 145;
+}
+
+footer {
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #faf5f5;
+}
+
+footer .address h2 {
+  color: #555555;
+  font-size: 16px;
+  margin: 0;
+}
+
+footer .address p {
+  color: #777777;
+  margin: 0;
+  line-height: 100%;
 }
 /*# sourceMappingURL=style.css.map */
