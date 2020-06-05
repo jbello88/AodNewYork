@@ -24,10 +24,6 @@ p {
   text-transform: uppercase;
 }
 
-.center {
-  text-align: center;
-}
-
 h1 {
   text-transform: uppercase;
   text-align: center;
@@ -49,8 +45,15 @@ h1 {
   z-index: 300;
 }
 
+header {
+  background: url(../assets/Layer7.png) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+}
+
 header nav {
-  height: 760px;
+  height: 160px;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,12 +79,6 @@ header nav .dot {
   margin-top: 22px;
   width: 10px;
   height: 10px;
-}
-
-header .back {
-  position: absolute;
-  top: 0px;
-  z-index: -99;
 }
 
 .heading {

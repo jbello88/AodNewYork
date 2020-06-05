@@ -1,6 +1,11 @@
 header {
+  background: url(../assets/Layer7.png) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+
   nav {
-    height: 760px;
+    height: 160px;
     padding: 20px;
     display: flex;
     align-items: flex-start;
@@ -19,10 +24,5 @@ header {
       width: 10px;
       height: 10px;
     }
-  }
-  .back {
-    position: absolute;
-    top: 0px;
-    z-index: -99;
   }
 }
